@@ -1,67 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flex</title>
-  <style>
-    .parent{
-      display: flex;
-      background-color: aqua;
-      flex-direction: row-reverse;
-      justify-content: center;
-      align-items: start;
-      align-items: center;
-
-    }
-    .card{
-      width: 150px;
-      border: 4px double black;
-      border-radius: 10px;
-      margin:10px ;
-      background-color: green;
-    }
-
-    .card-img{
-      width: 100%;
-      height: 150px;
-      border-radius: 7px 7px 0 0 ;
-    }
-    .card-title{
-      text-align: center;
-      margin:0 ;
-      padding: 0;
-    }
-  </style>
+    <title>All Flexbox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="parent">
-    <div class="card">
-      <img src="daltons.jpeg" class="card-img">
-      <h2 class="card-title">One</h2>
-    </div>
-    <div class="parent">
-      <div class="card">
-        <img src="Bear.jpeg" class="card-img">
-        <h2 class="card-title">Two</h2>
-      </div>
-      <div class="parent">
-        <div class="card">
-          <img src="doraemon.jpeg" class="card-img">
-          <h2 class="card-title">Three</h2>
-        </div>
-        <div class="parent">
-          <div class="card">
-            <img src="shinchan.jpeg" class="card-img">
-            <h2 class="card-title">Four</h2>
-          </div>
-          <div class="parent">
-            <div class="card">
-              <img src="Tom.jpeg" class="card-img">
-              <h2 class="card-title">Five</h2>
-            </div>
+    <style>
+        
+.fcontainer{
+  display: flex;
+  border: 2px solid grey;
+  margin-bottom: 10px;
+}
+
+.fitem{
+    background-color: red;
+    border: 2px solid black;
+    margin: 12px;
+    width: 125px;
+    height: 125px;
+}
+
+
+.flex-column-container{
+    display: flex;
+    border: 2px solid grey;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+.flex-column-item{
+    background-color: yellow;
+    border: 2px solid black;
+    margin: 12px;
+    width: 125px;
+    height: 125px;
+}
+
+.row-reverse-container{
+    display: flex;
+    border: 2px solid grey;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+  }
+
+  .row-reverse-item{
+    background-color: pink;
+    border: 2px solid black;
+    margin: 12px;
+    width: 125px;
+    height: 125px;
+  }
+
+  .column-reverse-container{
+    display: flex;
+    border: 2px solid grey;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+
+  .column-reverse-item{
+    background-color: skyblue;
+    border: 2px solid black;
+    margin: 12px;
+    width: 125px;
+    height: 125px;
+  }
+    </style>
+     <div class="fcontainer">
+           <div class="fitem">1</div>
+           <div class="fitem">2</div>
+           <div class="fitem">3</div>
+           <div class="fitem">4</div>
+     </div>
+
+     <div class="flex-column-container">
+        <div class="flex-column-item">1</div>
+        <div class="flex-column-item">2</div>
+        <div class="flex-column-item">3</div>
+        <div class="flex-column-item">4</div>
   </div>
+
+  <div class="row-reverse-container">
+    <div class="row-reverse-item">1</div>
+    <div class="row-reverse-item">2</div>
+    <div class="row-reverse-item">3</div>
+    <div class="row-reverse-item">4</div>
+</div>
+
+<div class="column-reverse-container">
+    <div class="column-reverse-item">1</div>
+    <div class="column-reverse-item">2</div>
+    <div class="column-reverse-item">3</div>
+    <div class="column-reverse-item">4</div>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Justify Content </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+.fcontainer{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   
+  .fitem{
+      background-color: red;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+  .justify-content-end-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-end-item{
+      background-color: green;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+  .justify-content-start-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-start-item{
+      background-color: orange;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+  
+
+  .align-item-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .align-item{
+      background-color: tomato;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+
+  .justify-content-space-evenly-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-space-evenly-item{
+      background-color: blueviolet;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+
+  .justify-content-space-between-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-space-between-item{
+      background-color: skyblue;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+
+  .justify-content-space-around-container{
+    display: flex;
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+  
+  .justify-content-space-around-item{
+      background-color: red;
+      border: 2px solid black;
+      margin: 12px;
+      width: 125px;
+      height: 125px;
+  }
+
+  .item1{
+    order: 3;
+  }
+    </style>
+    <div class="fcontainer">
+        <div class="fitem item1">one</div>
+        <div class="fitem item2">two</div>
+        <div class="fitem item3">three</div>
+        <div class="fitem item4">four</div>
+  </div>
+
+  <div class="justify-content-end-container">
+    <div class="justify-content-end-item">1</div>
+    <div class="justify-content-end-item">2</div>
+    <div class="justify-content-end-item">3</div>
+    <div class="justify-content-end-item">4</div>
+</div>
+
+<div class="justify-content-start-container">
+    <div class="justify-content-start-item">1</div>
+    <div class="justify-content-start-item">2</div>
+    <div class="justify-content-start-item">3</div>
+    <div class="justify-content-start-item">4</div>
+</div>
+
+<div class="align-item-container">
+    <div class="align-item">1</div>
+    <div class="align-item">2</div>
+    <div class="align-item">3</div>
+    <div class="align-item">4</div>
+</div>
+
+<div class="justify-content-space-evenly-container">
+    <div class="justify-content-space-evenly-item">1</div>
+    <div class="justify-content-space-evenly-item">2</div>
+    <div class="justify-content-space-evenly-item">3</div>
+    <div class="justify-content-space-evenly-item">4</div>
+</div>
+
+<div class="justify-content-space-between-container">
+    <div class="justify-content-space-between-item">1</div>
+    <div class="justify-content-space-between-item">2</div>
+    <div class="justify-content-space-between-item">3</div>
+    <div class="justify-content-space-between-item">4</div>
+</div>
+
+<div class="justify-content-space-around-container">
+    <div class="justify-content-space-around-item">1</div>
+    <div class="justify-content-space-around-item">2</div>
+    <div class="justify-content-space-around-item">3</div>
+    <div class="justify-content-space-around-item">4</div>
+</div>
+
+
 </body>
 </html>
